@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Transfer Funds</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <header>
+      <p class="label">Available balance</p>
+      <h1 id="balance" class="balance">$1,000.00</h1>
+    </header>
+
+    <form id="transfer-form" novalidate>
+      <label for="amount" class="label">Amount to transfer</label>
+      <div class="field">
+        <span class="prefix">$</span>
+        <input
+          id="amount"
+          name="amount"
+          type="number"
+          min="0"
+          step="0.01"
+          inputmode="decimal"
+          placeholder="0.00"
+          autocomplete="off"
+          required
+        />
+      </div>
+
+      <button id="submit-btn" type="submit">
+        <span class="spinner" aria-hidden="true"></span>
+        <span id="btn-text">Transfer</span>
+      </button>
+    </form>
+
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
